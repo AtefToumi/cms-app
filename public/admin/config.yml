@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: AtefToumi/cms-app
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "date", label: "Date", widget: "datetime" }
