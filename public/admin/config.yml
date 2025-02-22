@@ -2,8 +2,6 @@ backend:
   name: github
   repo: AtefToumi/cms-app
   branch: main
-  client_id: ${GITHUB_CLIENT_ID}
-  client_secret: ${GITHUB_CLIENT_SECRET}
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
