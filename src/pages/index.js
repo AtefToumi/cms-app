@@ -24,7 +24,11 @@ export async function getStaticProps() {
     const filePath = path.join(projectsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
-    return { ...data };
+
+    return {
+      ...data,
+      date: data.date ? new Date(data.date).toISOString() : null, // Convert date to string
+    };
   });
 
   return { props: { projects } };
